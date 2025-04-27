@@ -95,8 +95,8 @@ export default function Contact() {
           className="max-w-3xl mx-auto text-center mb-8"
         >
           <h2 className="text-3xl font-bold mb-2">Contacto</h2>
-          <div className="h-1 w-20 bg-gray-900 mx-auto mb-6"></div>
-          <p className="text-gray-700">¿Tienes alguna pregunta o propuesta? No dudes en contactarme.</p>
+          <div className="h-1 w-20 bg-gray-900 dark:bg-white mx-auto mb-6"></div>
+          <p className="text-gray-700 dark:text-zinc-200">¿Tienes alguna pregunta o propuesta? No dudes en contactarme.</p>
         </motion.div>
 
         <motion.div
@@ -106,7 +106,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="max-w-md mx-auto"
         >
-          <Card className="border border-gray-200 shadow-sm">
+          <Card className="border border-gray-200 dark:border-zinc-700 shadow-sm">
             <CardContent className="p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -166,15 +166,15 @@ export default function Contact() {
                     )}
                   />
 
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full ">
                     Enviar mensaje
                   </Button>
                 </form>
               </Form>
 
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-zinc-700">
                 <div className="flex items-center justify-between">
-                  <a href={`mailto:${EMAIL}`} className="text-gray-900 hover:underline">
+                  <a href={`mailto:${EMAIL}`} className="text-gray-900 hover:underline dark:text-white">
                     {EMAIL}
                   </a>
                   <Button variant="ghost" size="sm" onClick={copyEmail} className="group">

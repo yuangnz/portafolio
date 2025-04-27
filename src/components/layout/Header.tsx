@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from "./ModeButton"
 
 const navItems = [
   { name: 'Sobre mí', href: '#about' },
@@ -27,7 +28,7 @@ export default function Header() {
   return (
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-sm border-b border-gray-100' : 'bg-transparent'
+        isScrolled ? 'bg-white dark:bg-zinc-950 shadow-sm border-b border-gray-100 dark:border-zinc-900' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -35,27 +36,32 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="font-medium text-lg">
-          <a href="#" className="text-gray-600 hover:text-black transition-colors">
+          <a href="#" className="transition-colors">
             Juan David Gonzalez Nuñez
           </a>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-8 items-center">
             {navItems.map((item) => (
               <li key={item.name}>
           <a
             href={item.href}
-            className="text-gray-700 hover:text-black transition-colors text-sm relative group"
+            className="transition-colors text-sm relative group"
           >
             {item.name}
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0  transition-all duration-300 group-hover:w-full" />
           </a>
               </li>
             ))}
+            <div className='flex-none'>
+            <ModeToggle />
+          </div>
           </ul>
+          
         </nav>
+        
 
         {/* Mobile Menu Button */}
         <Button
@@ -71,7 +77,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <motion.nav
-          className="md:hidden bg-white border-b border-gray-100"
+          className="md:hidden border-b border-gray-100"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
@@ -82,7 +88,7 @@ export default function Header() {
               <li key={item.name} className="py-2">
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-black transition-colors block"
+                  className="transition-colors block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+// Project: portfolio
 import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
@@ -9,11 +8,13 @@ import Skills from '@/components/sections/Skills';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import Education from '@/components/sections/Education';
+import { ThemeProvider } from "@/components/theme-provider"
 
 function App() {
 
   return (
-    <AnimatePresence>
+    <>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header/>
       <div className="min-h-screen mx-auto max-w-7xl">
         <main>
@@ -27,7 +28,8 @@ function App() {
         </main>
         <Footer />
       </div>
-    </AnimatePresence>
+    </ThemeProvider>
+    </>
   );
 }
 

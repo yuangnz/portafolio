@@ -10,7 +10,7 @@ const skillCategories = {
       'HTML5', 'CSS3', 'Framer Motion'
     ],
     intermediate: [
-      'Vue.js', 'Next.js', 'Jest', 'Testing Library', 'Webpack'
+      'Next.js', 'Jest', 'Testing Library', 'Webpack'
     ]
   },
   backend: {
@@ -29,7 +29,7 @@ const skillCategories = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding bg-neutral-50 rounded-2xl">
+    <section id="skills" className="section-padding bg-neutral-50 dark:bg-zinc-950 rounded-2xl">
       <div className="container mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export default function Skills() {
           className="max-w-3xl mx-auto text-center mb-8"
         >
           <h2 className="text-3xl font-bold mb-2">Habilidades</h2>
-          <div className="h-1 w-20 bg-gray-900 mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-gray-900 dark:bg-white mx-auto mb-6"></div>
         </motion.div>
         
         <motion.div
@@ -49,7 +49,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <Card className="border border-gray-200 shadow-sm">
+          <Card className="border border-gray-200 dark:border-zinc-600 shadow-sm">
             <CardContent className="p-6">
               <Tabs defaultValue="frontend" className="w-full">
                 <TabsList className="grid grid-cols-3 mb-6">
@@ -61,7 +61,7 @@ export default function Skills() {
                 <TabsContent value="frontend">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-sm font-medium text-gray-500 mb-3">Avanzado</h3>
+                      <h3 className="text-sm font-medium mb-3">Mi dia a dia.</h3>
                       <div className="flex flex-wrap gap-2">
                         {skillCategories.frontend.advanced.map((skill, index) => (
                           <Badge key={index} className="skill-badge skill-badge-primary">
@@ -71,7 +71,7 @@ export default function Skills() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-sm font-medium text-white mb-3">Intermedio</h3>
+                      <h3 className="text-sm font-medium mb-3">Intermedio</h3>
                       <div className="flex flex-wrap gap-2">
                         {skillCategories.frontend.intermediate.map((skill, index) => (
                           <Badge key={index} className="skill-badge">
@@ -85,10 +85,10 @@ export default function Skills() {
                 
                 <TabsContent value="backend">
                   <div>
-                    <h3 className="text-sm font-medium text-white mb-3">En aprendizaje</h3>
+                    <h3 className="text-sm font-medium mb-3">En aprendizaje</h3>
                     <div className="flex flex-wrap gap-2">
                       {skillCategories.backend.learning.map((skill, index) => (
-                        <Badge key={index} className="skill-badge skill-badge-neutral">
+                        <Badge key={index} className="skill-badge">
                           {skill}
                         </Badge>
                       ))}
@@ -98,10 +98,10 @@ export default function Skills() {
                 
                 <TabsContent value="infrastructure">
                   <div>
-                    <h3 className="text-sm font-medium text-gray-500 mb-3">Conocimientos básicos</h3>
+                    <h3 className="text-sm font-medium mb-3">Conocimientos básicos</h3>
                     <div className="flex flex-wrap gap-2">
                       {skillCategories.infrastructure.basic.map((skill, index) => (
-                        <Badge key={index} className="skill-badge skill-badge-neutral">
+                        <Badge key={index} className="skill-badge">
                           {skill}
                         </Badge>
                       ))}
@@ -110,7 +110,7 @@ export default function Skills() {
                 </TabsContent>
               </Tabs>
               
-              <p className="text-sm text-gray-500 mt-6 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-500 dark:text-zinc-200 mt-6 pt-6 border-t border-gray-200">
                 Actualmente aprendiendo: automatización con Linux, DevOps básico y CI/CD.
               </p>
             </CardContent>

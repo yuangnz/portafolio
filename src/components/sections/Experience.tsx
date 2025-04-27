@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Briefcase, Code, Monitor, FileText } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Briefcase, Code, Monitor } from 'lucide-react';
 
 const experiences = [
   {
@@ -55,7 +54,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-padding bg-white">
+    <section id="experience" className="section-padding bg-white dark:bg-zinc-950 ">
       <div className="container mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,8 +63,8 @@ export default function Experience() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-neutral-900">Experiencia</h2>
-          <div className="h-1 w-20 bg-neutral-900 mx-auto mb-6"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-neutral-900 dark:text-white">Experiencia</h2>
+          <div className="h-1 w-20 bg-neutral-900 dark:bg-white mx-auto mb-6"></div>
         </motion.div>
         
         <div className="max-w-3xl mx-auto">
@@ -79,25 +78,25 @@ export default function Experience() {
               className="timeline-item"
             >
               <div className="timeline-dot" />
-              <Card className="border border-neutral-200 shadow-md mb-6">
+              <Card className="border border-neutral-200 dark:border-zinc-600 shadow-md mb-6">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-neutral-100 rounded-full">
+                    <div className="p-2 bg-neutral-100 dark:bg-zinc-800 rounded-full">
                       {exp.icon}
                     </div>
                     <div>
-                      <h3 className="font-medium text-xl text-neutral-900">{exp.role}</h3>
-                      <p className="text-neutral-700">{exp.company}</p>
+                      <h3 className="font-medium text-xl text-neutral-900 dark:text-white">{exp.role}</h3>
+                      <p className="text-neutral-700 dark:text-white">{exp.company}</p>
                     </div>
                     <div className="ml-auto text-right">
-                      <span className="text-sm font-medium text-neutral-900">{exp.period}</span>
-                      <p className="text-sm text-neutral-700">{exp.type}</p>
+                      <span className="text-sm font-medium text-neutral-900 dark:text-zinc-400">{exp.period}</span>
+                      <p className="text-sm text-neutral-700 dark:text-zinc-400">{exp.type}</p>
                     </div>
                   </div>
-                  <p className="text-neutral-800 mb-4 text-lg">{exp.description}</p>
+                  <p className="text-neutral-800 mb-4 text-lg dark:text-white">{exp.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="border-neutral-800 text-neutral-800">
+                      <Badge key={i} variant="outline" className="border-neutral-800 text-neutral-800 dark:border-zinc-400 dark:text-zinc-300">
                         {tech}
                       </Badge>
                     ))}
@@ -106,21 +105,7 @@ export default function Experience() {
               </Card>
             </motion.div>
           ))}
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-8"
-          >
-            <Button variant="outline" className="group" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FileText className="mr-2 group-hover:scale-110 transition-transform" />
-                Ver CV completo
-              </a>
-            </Button>
-          </motion.div>
+
         </div>
       </div>
     </section>

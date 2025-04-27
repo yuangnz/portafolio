@@ -7,8 +7,8 @@ export default function Hero() {
 
 
   return (
-    <section className="min-h-[90vh] flex items-center justify-center bg-white relative">
-      <div className="container mx-auto px-4 text-center">
+    <section className="min-h-[90vh] flex items-center justify-center relative transition-all duration-300">
+      <div className="container mx-auto px-4 text-center ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,24 +16,24 @@ export default function Hero() {
           className="max-w-3xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-neutral-900 mb-8 tracking-tight"
+            className="text-5xl md:text-7xl font-bold  mb-8 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Hola, soy Juan.{" "}
+          > 
+            <span className=''>Hola, soy Juan,{" "}</span>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-neutral-900 to-gray-800"
+              className=" to-gray-800"
             >
-
-              Software Engineer.
+              <br />
+              <span className='pt-16'>Software Engineer.</span>
             </motion.span>
           </motion.h1>
           <motion.p
-            className="text-xl md:text-2xl text-neutral-800 mb-12"
+            className="text-xl md:text-2xl mb-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <Button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="rounded-full px-8 py-6 group bg-neutral-900 hover:bg-neutral-800"
+              className="rounded-full px-8 py-6 group "
             >
               Ver proyectos{" "}
               <ArrowDown className="ml-2 group-hover:rotate-90 transition-transform duration-300" />
@@ -69,7 +69,7 @@ export default function Hero() {
           ease: "easeInOut"
         }}
       >
-        <ArrowDown className="text-neutral-900" />
+        <ArrowDown className="" />
       </motion.div>
     </section>
   );

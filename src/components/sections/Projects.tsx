@@ -27,17 +27,6 @@ const projects = [
     linkmode: 'Live',
     codeStatus: 'Codigo Privado'
   },
-  {
-    icon: <Cloud className="h-5 w-5" />,
-    title: 'Portafolio',
-    description: 'Sitio web de portafolio personal con diseño minimalista y animaciones suaves.',
-    technologies: ['React', 'TypeScript', 'Framer Motion'],
-    githubUrl: '#',
-    liveUrl: '#',
-    image: 'https://i.imgur.com/23IMFOj.png',
-    linkmode: 'Live',
-    codeStatus: 'Codigo Publico'
-  },
 ];
 
 export default function Projects() {
@@ -52,7 +41,7 @@ export default function Projects() {
           className="max-w-3xl mx-auto text-center mb-8"
         >
           <h2 className="text-3xl font-bold mb-2">Proyectos</h2>
-          <div className="h-1 w-20 bg-gray-900 mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-gray-900 dark:bg-white mx-auto mb-6"></div>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {projects.map((project, index) => (
@@ -63,14 +52,16 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="project-card border border-gray-200 overflow-hidden h-full grayscale hover:grayscale-0">
+              <Card className="project-card border border-gray-200 dark:border-zinc-600 overflow-hidden h-full grayscale hover:grayscale-0">
                 <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-300"
-                  />
-                  <div className="absolute top-4 left-4 p-2 bg-white rounded-full shadow-sm">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-all duration-300"
+                    />
+                  </a>
+                  <div className="absolute top-4 left-4 p-2 bg-white dark:bg-zinc-800 rounded-full shadow-sm">
                     {project.icon}
                   </div>
                 </div>
@@ -78,7 +69,7 @@ export default function Projects() {
                   <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
+                  <p className="text-gray-700 dark:text-zinc-200 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, i) => (
                       <Badge key={i} variant="secondary" className="font-normal">
@@ -90,13 +81,13 @@ export default function Projects() {
                 <CardFooter className="flex justify-start gap-3">
                   <Button variant="outline" size="sm" className="group" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} className="mr-2 group-hover:scale-110 transition-transform" /> 
+                      <Github size={16} className="mr-2 group-hover:scale-110 transition-transform" />
                       {project.codeStatus}
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" className="group" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={16} className="mr-2 group-hover:scale-110 transition-transform" /> 
+                      <ExternalLink size={16} className="mr-2 group-hover:scale-110 transition-transform" />
                       {project.linkmode}
                     </a>
                   </Button>
