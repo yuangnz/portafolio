@@ -12,8 +12,20 @@ export default function Footer() {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4">
+        <div className='text-center'>
+          <div className="text-lg text-gray-600 dark:text-white mb-2 md:mb-0 tracking-tight flex gap-[1%] flex-center justify-center">
+            <div className="flex flex-col">
+              <span className='font-thin item text-2xl'>Ad astra per aspera </span>
+              <span className='italic text-xs item'>(Hacia las estrellas a través de las dificultades)</span>
+            </div>
+            <a href="https://www.nasa.gov/history/apollo-1-crew-honored-in-new-tribute-exhibit/" target='_blank' className='flex items-center'>
+              <span>-</span><span className="font-mono italic underline-offset-4 mx-2 tracking-wide">NASA</span>
+            </a>
+          </div>
+          
+        </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-sm text-gray-600 dark:text-white mb-4 md:mb-0">
+          <div className="font-thin text-sm text-gray-600 dark:text-white mb-4 md:mb-0">
             © Juan David Gonzalez Nuñez – {currentYear}
           </div>
           <div className="flex space-x-4">
@@ -23,9 +35,10 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/yuangnz" target="_blank" className="social-icon text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-400">
               <Linkedin size={20} />
             </a>
-          
+
           </div>
         </div>
+
       </div>
     </motion.footer>
   );

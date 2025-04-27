@@ -29,7 +29,7 @@ const skillCategories = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding bg-neutral-50 dark:bg-zinc-950 rounded-2xl">
+    <section id="skills" className="section-padding bg-neutral-50 dark:bg-[#0b0c0c] rounded-2xl">
       <div className="container mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

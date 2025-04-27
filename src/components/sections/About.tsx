@@ -21,7 +21,7 @@ const hobbies = [
 
 export default function About() {
   return (
-    <section id="about" className="section-padding transition-all duration-300 bg-neutral-50 dark:bg-zinc-950 rounded-2xl">
+    <section id="about" className="section-padding transition-all duration-300 bg-neutral-50 dark:bg-[#0b0c0c] rounded-2xl">
       <div className="container mx-auto container-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -53,7 +53,7 @@ export default function Education() {
                             <Card className="border border-neutral-200 shadow-md dark:border-zinc-600">
                                 <CardContent className="p-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="p-2 bg-neutral-100 rounded-full dark:bg-zinc-800">
+                                        <div className="p-2 bg-neutral-100 rounded-full dark:bg-[#0b0c0c]">
                                             <GraduationCap className="h-5 w-5 text-neutral-900 dark:text-white" />
                                         </div>
                                         <div className="flex-1">
