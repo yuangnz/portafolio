@@ -177,8 +177,17 @@ export default function Contact() {
                   <a href={`mailto:${EMAIL}`} className="text-gray-900 hover:underline dark:text-white">
                     {EMAIL}
                   </a>
-                  <Button variant="ghost" size="sm" onClick={copyEmail} className="group">
+                  <Button
+                    variant="ghost"
+                    aria-label="Copiar email al portapapeles"
+                    title="Copiar email"
+                    id="text"
+                    size="sm"
+                    onClick={copyEmail}
+                    className="group"
+                  >
                     <Copy className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                    <span className="sr-only">Copiar email al portapapeles</span>
                   </Button>
                 </div>
               </div>

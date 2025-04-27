@@ -46,11 +46,9 @@ export default function Header() {
           <HoverCard>
             <HoverCardTrigger>
               <div className='flex flex-row'>
-
-                <a href="#" className="transition-colors" style={{ textShadow: '3px 4px 3px rgba(0,0,0,0.25)' }}> 
+                <span className="transition-colors" style={{ textShadow: '3px 4px 3px rgba(0,0,0,0.25)' }}>
                   @yuangnz
-
-                </a>
+                </span>
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black dark:bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-black dark:bg-white"></span>
@@ -91,16 +89,18 @@ export default function Header() {
                 <a
                   href={item.href}
                   className="transition-colors text-base relative group tracking-tighter font-mono "
-                  style={{ textShadow: '3px 4px 3px rgba(0,0,0,0.25)'}}
+                  style={{ textShadow: '3px 4px 3px rgba(0,0,0,0.25)' }}
                 >
                   {item.name}
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black dark:bg-white transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
-            <div className='flex-none'>
-              <ModeToggle />
-            </div>
+            <li >
+              <div>
+                <ModeToggle />
+              </div>
+            </li>
           </ul>
 
         </nav>

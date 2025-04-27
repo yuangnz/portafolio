@@ -28,7 +28,6 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="to-gray-800"
             >
               <br />
               <span className='pt-16 text-shadow-sm' style={{ textShadow: '3px 4px 9px rgba(0,0,0,0.35)' }}>Software Engineer.</span>
@@ -40,7 +39,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <div className='' style={{ textShadow: '3px 4px 9px rgba(0,0,0,0.15)' }}>
+            <span className='' style={{ textShadow: '3px 4px 9px rgba(0,0,0,0.15)' }}>
 
               <TypeAnimation
                 preRenderFirstString={true}
@@ -62,7 +61,7 @@ export default function Hero() {
                 deletionSpeed={60}
                 repeat={Infinity}
               />
-            </div >
+            </span >
           </motion.p>
 
           <motion.div
@@ -73,8 +72,10 @@ export default function Hero() {
             <Button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="rounded-full px-8 py-6 group shadow-xl"
+              aria-label="Ver proyectos"
+              id="text"
             >
-              Ver proyectos{" "}
+              <span>Ver proyectos {" "}</span>
               <ArrowDown className="ml-2 group-hover:rotate-90 transition-transform duration-300 " />
             </Button>
           </motion.div>

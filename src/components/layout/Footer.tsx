@@ -22,20 +22,33 @@ export default function Footer() {
               <span>-</span><span className="font-mono italic underline-offset-4 mx-2 tracking-wide">NASA</span>
             </a>
           </div>
-          
+
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="font-thin text-sm text-gray-600 dark:text-white mb-4 md:mb-0">
             © Juan David Gonzalez Nuñez – {currentYear}
           </div>
           <div className="flex space-x-4">
-            <a href="https://github.com/yuangnz" target='_blank' className="social-icon text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-400">
+            <a
+              href="https://github.com/yuangnz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-400"
+              aria-label="Ir al perfil de GitHub de Juan David Gonzalez Nuñez"
+            >
               <Github size={20} />
+              <span className="sr-only">GitHub de Juan David Gonzalez Nuñez</span>
             </a>
-            <a href="https://www.linkedin.com/in/yuangnz" target="_blank" className="social-icon text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-400">
+            <a
+              href="https://www.linkedin.com/in/yuangnz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-400"
+              aria-label="Ir al perfil de LinkedIn de Juan David Gonzalez Nuñez"
+            >
               <Linkedin size={20} />
+              <span className="sr-only">LinkedIn de Juan David Gonzalez Nuñez</span>
             </a>
-
           </div>
         </div>
 
