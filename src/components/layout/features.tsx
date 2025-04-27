@@ -1,8 +1,10 @@
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
+import { useEffect, useState } from "react"
 
-export function ModeToggle() {
+
+function ModeToggle() {
     const { theme, setTheme } = useTheme()
 
     const toggleTheme = () => {
@@ -16,3 +18,21 @@ export function ModeToggle() {
         </Button>
     )
 }
+
+function useLastCommitDate(repo = "yuangnz/portafolio") {
+    const [date, setDate] = useState<string | null>(null)
+
+    useEffect(() => {
+        fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data[0]?.commit?.committer?.date) {
+                    setDate(new Date(data[0].commit.committer.date).toLocaleDateString())
+                }
+            })
+    }, [repo])
+
+    return date
+}
+
+export { ModeToggle, useLastCommitDate }

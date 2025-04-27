@@ -156,3 +156,19 @@ body {
       opacity: 0.4;
     }
   }
+
+  @keyframes float-space {
+    0% {
+      transform: translateY(0) scale(1.01) rotate(-1deg);
+    }
+    50% {
+      transform: translateY(2px) scale(1.02) rotate(1deg);
+    }
+    100% {
+      transform: translateY(0) scale(1.01) rotate(-1deg);
+    }
+  }
+
+  .animate-float-space {
+    animation: float-space 8s ease-in-out infinite;
+  }

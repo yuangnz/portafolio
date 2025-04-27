@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="bg-white border-t border-gray-100 dark:bg-zinc-950 dark:border-zinc-900 py-8"
+      className="bg-white border-t border-gray-100 dark:bg-zinc-950 dark:border-zinc-900 py-4"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
