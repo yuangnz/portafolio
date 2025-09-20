@@ -22,7 +22,7 @@ const projects = [
     description: 'Aplicacion web sobre imagen de la empresa en dermatologia y medicina estética',
     technologies: ['React.js', 'Firebase', 'Typescript', 'TailwindCSS', 'Framer Motion', 'TDD', 'CEO'],
     githubUrl: '#',
-    liveUrl: 'https://rondihair.vercel.app',
+    liveUrl: 'https://rondihair.com.ar',
     image: 'https://i.imgur.com/HCqOPPy.png',
     linkmode: 'Live',
     codeStatus: 'Codigo Privado'
