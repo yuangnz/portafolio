@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Header/>
       <div className="min-h-screen mx-auto max-w-7xl">
         <main>
